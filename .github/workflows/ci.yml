@@ -31,6 +31,6 @@ jobs:
      id: vars
      run: echo "image=${{ secrets.DOCKER_USERNAME }}/recipeshare:latest" >> "$GITHUB_OUTPUT"
    - name: Build Docker image
-     run: docker build -t ${{ steps.vars.outputs.image }} .
+     run: docker build -t ${{ steps.vars.outputs.image }} -f RecipeShare.API/Dockerfile .
    - name: Push Docker image
      run: docker push ${{ steps.vars.outputs.image }}
