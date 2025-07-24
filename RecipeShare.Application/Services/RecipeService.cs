@@ -24,6 +24,8 @@ public class RecipeService : IRecipeService
                                          .Any(t => t.Trim().Equals(tag, StringComparison.OrdinalIgnoreCase)))
                 .ToList();
         }
+        if (!allRecipes.Any())
+            throw new KeyNotFoundException("Recipe not found.");
         return _mapper.Map<IEnumerable<RecipeDto>>(allRecipes);
     }
     public async Task<RecipeDto?> GetByIdAsync(Guid id)
