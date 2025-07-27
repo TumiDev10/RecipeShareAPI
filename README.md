@@ -77,3 +77,5 @@ Unit tests are written using `xUnit`.
 ```bash
 cd RecipeShare.Tests
 dotnet test
+
+Developed by Tumi Mashigo
