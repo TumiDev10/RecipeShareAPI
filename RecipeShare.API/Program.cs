@@ -12,6 +12,17 @@ using RecipeShare.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+
 builder.Host.UseSerilog((context, services, configuration) =>
 {
     configuration
@@ -35,6 +46,7 @@ builder.Services.AddSwaggerGen();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
 var app = builder.Build();
+app.UseCors("AllowFrontend");
 // Middleware registration
 app.UseMiddleware<GlobalExceptionMiddleware>(); 
 
@@ -46,7 +58,7 @@ using (var scope = app.Services.CreateScope())
 }
 app.UseSwagger();
 app.UseSwaggerUI();
-app.UseHttpsRedirection();
+app.UseAuthorization();
 app.MapControllers();
 
 // Configure the HTTP request pipeline.
