@@ -18,7 +18,6 @@ namespace RecipeShare.Application.DTOs
         public string? Steps { get; set; }
         [Range(1, int.MaxValue)]
         public int? CookingTimeInMinutes { get; set; }
-        [Required]
         public string? DietaryTags { get; set; }
     }
 }
