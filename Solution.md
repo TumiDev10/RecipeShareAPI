@@ -25,7 +25,21 @@ Application Layer (Services + DTOs)
 Infrastructure Layer (EF Core + SQL Server)
 ↓
 Domain Layer (Entities & Interfaces
-
+---
+## API Endpoints
+| Method | Route               | Description        |
+|--------|---------------------|--------------------|
+| GET    | /api/recipes        | Get all recipes    |
+| GET    | /api/recipes/{id}   | Get a recipe by ID |
+| POST   | /api/recipes        | Create a recipe    |
+| PUT    | /api/recipes/{id}   | Update a recipe    |
+| DELETE | /api/recipes/{id}   | Delete a recipe    |
+---
+## Validation Rules
+- `Title`: Required
+- `CookingTime`: Must be greater than 0
+- `Ingredients` and `Steps`: Required
+- `DietaryTags`: Optional string array
 ---
 ## Trade-Offs
 | Trade-Off | Decision |
