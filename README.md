@@ -12,7 +12,7 @@ This is the backend API for RecipeShare, built with **ASP.NET Core 8**, **Entity
 - 🐞 Serilog-based logging
 - 🚀 Benchmark performance test using `Stopwatch`
 - 🧱 DDD-inspired folder structure
-- 🐳 Docker-ready setup (optional)
+- 🐳 Docker-ready setup
 ---
 ## Getting Started
 ### Prerequisites
@@ -77,5 +77,5 @@ Unit tests are written using `xUnit`.
 ```bash
 cd RecipeShare.Tests
 dotnet test
-
-Developed by Tumi Mashigo
+---
+### Developed by Tumi Mashigo
