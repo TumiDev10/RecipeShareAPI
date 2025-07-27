@@ -67,7 +67,7 @@ Domain Layer (Entities & Interfaces
 ## Cost & Efficiency Strategy
 - Hosted on Docker container with low-cost B1 tier
 - Uses local SQL Server, but can migrate to Azure SQL or PostgreSQL for cost-saving
-- Uses .NET 6 LTS for long-term support and low maintenance
+- Uses .NET 8 LTS for long-term support and low maintenance
 - Docker allows containerized, repeatable builds and faster deployment pipelines
 ---
 ## Summary
