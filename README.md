@@ -38,39 +38,7 @@ This is the backend API for RecipeShare, built with **ASP.NET Core 8**, **Entity
    ```
 > 🧪 Visit the API Swagger UI at: `https://localhost:5000/swagger`
 ---
-## Project Structure
-RecipeShare.API
-├── Controllers         # API endpoints
-├── DTOs                # Request/response models
-├── Services            # Business logic
-├── Repositories        # Data access layer
-├── Domain              # Core domain models
-├── Infrastructure      # EF Core setup, DbContext, seed data
-├── Program.cs          # App entry and middleware configRecipeShare.API
-├── Controllers         # API endpoints
-├── DTOs                # Request/response models
-├── Services            # Business logic
-├── Repositories        # Data access layer
-├── Domain              # Core domain models
-├── Infrastructure      # EF Core setup, DbContext, seed data
-├── Program.cs          # App entry and middleware config
 
----
-## API Endpoints
-| Method | Route               | Description        |
-|--------|---------------------|--------------------|
-| GET    | /api/recipes        | Get all recipes    |
-| GET    | /api/recipes/{id}   | Get a recipe by ID |
-| POST   | /api/recipes        | Create a recipe    |
-| PUT    | /api/recipes/{id}   | Update a recipe    |
-| DELETE | /api/recipes/{id}   | Delete a recipe    |
----
-## Validation Rules
-- `Title`: Required
-- `CookingTime`: Must be greater than 0
-- `Ingredients` and `Steps`: Required
-- `DietaryTags`: Optional string array
----
 ## Unit Tests
 Unit tests are written using `xUnit`.
 ### Run tests:
